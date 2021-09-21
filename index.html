@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <!-- <th>Class</th>
+                <th>Address</th>
+                <th>DOB</th> -->
+                <th colspan="3">Marks</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            
+        </tbody>
+    </table>
+</body>
+<script src="student.data.js"></script>
+<script>
+    function addDataToHTML() {
+        let tbody = document.querySelector('#table-body');
+
+        for (let data of studentData) {
+            let tableRow = document.createElement('tr');
+
+            let tableData = document.createElement('td');
+            tableData.innerText = data.name;
+            tableRow.append(tableData);
+            
+
+            tableData = document.createElement('td');
+            tableData.innerText = data.rollNumber;
+            tableRow.append(tableData);
+
+
+
+
+            tableData = document.createElement('td');
+            tableData.innerText = data.marks.maths;
+            tableRow.append(tableData);
+
+
+            
+            tableData = document.createElement('td');
+            tableData.innerText = data.marks.engligh;
+            tableRow.append(tableData);
+
+            
+            tableData = document.createElement('td');
+            tableData.innerText = data.marks.science;
+            tableRow.append(tableData);
+
+            
+            
+            tbody.append(tableRow);
+        }
+    }
+
+    addDataToHTML();
+</script>
+
+</html>
+
+
