@@ -1,7 +1,74 @@
+body{
+    background-image: url(./black\ backgroung.jpg);
+    display: flex;
+    align-content: center;
+}
+
+h1{
+    width: 98%;
+    background-color: rgb(121, 112, 112);
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 100px;
+    border-radius: 7px;
+    box-shadow: black;
+    border: 1px solid black;
+}
+
+table{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 100px;
+    padding: 10px;
+    /* display: flex; */
+
+    
+}
+
+tr{
+    padding-bottom: 30px;
+    font-family: 'Segoe UI';
+    /* column-gap: 10px; */
+    font-size: 1.5rem;
+    border: 10px solid rgb(228, 212, 212);
+    font-style:normal;
+}
+
+td{
+    padding: 10px;
+    font-family: 'Segoe UI';
+    font-size: 1.5rem;
+    border: 2px solid black;
+    font-style: normal;
+}
+td:hover{
+    background-color: rgba(73, 190, 79, 0.425);
+    font-weight: bolder;
+}
+/* 
+thead{
+    display: flex;
+} */
+
 tr:nth-child(even) {
-    color: red;
+    background-color: rgb(255, 255, 255);
 }
 
 tr:nth-child(odd) {
-    color: blue;
+    background-color: rgb(212, 203, 204);
 }
+
+/* td:nth-child(even) {
+    color: red;
+} 
+
+td:nth-child(odd) {
+    color: blue;
+} */
