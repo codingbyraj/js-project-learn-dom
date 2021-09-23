@@ -1,22 +1,15 @@
 body{
     background-image: url(./black\ backgroung.jpg);
-    display: flex;
-    align-content: center;
 }
 
 h1{
-    width: 98%;
     background-color: rgb(121, 112, 112);
     font-style: italic;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    position: absolute;
-    justify-content: center;
     text-align: center;
     padding: 5px;
-    margin-bottom: 100px;
     border-radius: 7px;
-    box-shadow: black;
     border: 1px solid black;
 }
 
@@ -25,11 +18,7 @@ table{
     width: 100%;
     font-size: 1.2rem;
     text-align: center;
-    margin-top: 100px;
     padding: 10px;
-    /* display: flex; */
-
-    
 }
 
 tr{

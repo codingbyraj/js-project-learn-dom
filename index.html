@@ -12,12 +12,17 @@
 
 <body>
     <h1>Student's General Information</h1>
-    <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
+    <select name="" id="filter">
+        <option value="">
+            All
+        </option>
+        <option value="8">
+            Class 8
+        </option>
+        <option value="9">
+            Class 9
+        </option>
+    </select>
     <table>
         <thead>
             <tr>
@@ -30,7 +35,7 @@
             </tr>
         </thead>
         <tbody id="table-body">
-            
+
         </tbody>
     </table>
 </body>
@@ -45,14 +50,14 @@
             let tableData = document.createElement('td');
             tableData.innerText = data.name;
             tableRow.append(tableData);
-            
+
 
             tableData = document.createElement('td');
             tableData.innerText = data.rollNumber;
             tableRow.append(tableData);
 
 
-            
+
             tableData = document.createElement('td');
             tableData.innerText = data.class;
             tableRow.append(tableData);
@@ -73,25 +78,43 @@
             tableRow.append(tableData);
 
 
-            
+
             tableData = document.createElement('td');
             tableData.innerText = data.marks.engligh;
             tableRow.append(tableData);
 
-            
+
             tableData = document.createElement('td');
             tableData.innerText = data.marks.science;
             tableRow.append(tableData);
 
-            
-            
+
+
             tbody.append(tableRow);
         }
     }
 
     addDataToHTML();
+
+    // drow down code
+    let dropDown = document.querySelector('#filter');
+    dropDown.addEventListener('change', filterByClass);
+
+    function filterByClass(event) {
+        let selectedValue = event.target.value;
+        console.log(selectedValue)
+        if (selectedValue === "") {
+            // show all data
+            // remove filter and show all data
+        } else if (selectedValue === 8){
+            // show class 8 data
+            // use filter method in "studentData"
+        } else if (selectedValue === 9) {
+            // show class 9 data
+            // use filter method in "studentData"
+        }
+    }
+
 </script>
 
 </html>
-
-
