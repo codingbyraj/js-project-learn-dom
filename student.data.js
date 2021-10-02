@@ -158,3 +158,6 @@ let studentData = [
         dob: "07-11-1997"
     },
 ];
+let marks=[45,100,8,5,65,95];
+marks.sort();
+console.log(marks);

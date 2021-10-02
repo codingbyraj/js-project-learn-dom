@@ -41,10 +41,10 @@
 </body>
 <script src="student.data.js"></script>
 <script>
-    function addDataToHTML() {
+    function addDataToHTML(students) {
         let tbody = document.querySelector('#table-body');
-
-        for (let data of studentData) {
+        tbody.innerHTML = "";
+        for (let data of students) {
             let tableRow = document.createElement('tr');
 
             let tableData = document.createElement('td');
@@ -89,12 +89,11 @@
             tableRow.append(tableData);
 
 
-
             tbody.append(tableRow);
         }
     }
 
-    addDataToHTML();
+    addDataToHTML(studentData);
 
     // drow down code
     let dropDown = document.querySelector('#filter');
@@ -102,17 +101,20 @@
 
     function filterByClass(event) {
         let selectedValue = event.target.value;
-        console.log(selectedValue)
+        let filteredData;
         if (selectedValue === "") {
             // show all data
             // remove filter and show all data
-        } else if (selectedValue === 8){
+            filteredData = studentData
+        } else {
             // show class 8 data
             // use filter method in "studentData"
-        } else if (selectedValue === 9) {
-            // show class 9 data
-            // use filter method in "studentData"
+            filteredData = studentData.filter(function (data) {
+                return data.class == selectedValue
+            })
+
         }
+        addDataToHTML(filteredData);
     }
 
 </script>

@@ -13,6 +13,19 @@ h1{
     border: 1px solid black;
 }
 
+#filter{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    border-radius: 7px;
+    box-shadow: white;
+    background-color:rgb(51, 48, 48) ;
+    color:white;
+    margin-left: 600px;
+}
+
 table{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
@@ -37,14 +50,10 @@ td{
     border: 2px solid black;
     font-style: normal;
 }
+
 td:hover{
     background-color: rgba(73, 190, 79, 0.425);
-    font-weight: bolder;
 }
-/* 
-thead{
-    display: flex;
-} */
 
 tr:nth-child(even) {
     background-color: rgb(255, 255, 255);
@@ -53,11 +62,3 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: rgb(212, 203, 204);
 }
-
-/* td:nth-child(even) {
-    color: red;
-} 
-
-td:nth-child(odd) {
-    color: blue;
-} */
